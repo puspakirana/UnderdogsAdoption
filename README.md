@@ -13,3 +13,5 @@ HOW TO START THE PROJECT
 6. Unzip project
 7. Run the project
 
+Inspired by Subaru Event "Make a Dog Day".
+Included images are downloaded from Subaru's website.
