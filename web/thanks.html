@@ -1,0 +1,49 @@
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Thank You!</title>
+        <link rel="stylesheet" href="thanks.css">
+    </head>
+    
+    <body>
+        
+        <div class="navbar">
+            <img href="index.html" src="media/logo.png" class="logo">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="underdogs.html">THE UNDERDOGS</a></li>
+                <li><a href="adopt.html">ADOPT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        
+        <div class="body2">
+            <div class="face">
+            <div class="eyes">
+                <div class="eye"></div>
+                <div class="eye"></div>
+            </div>
+            </div>
+            <h1>Thank You for Contacting Us</h1>
+            <h3>we will reply soon...</h3>
+        </div>
+        
+        <script>
+            document.querySelector('body').addEventListener('mousemove', eyeball);
+            
+            function eyeball(){
+                var eye = document.querySelectorAll('.eye');
+                eye.forEach(function(eye){
+                    let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2);
+                    let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2);
+                    let radian = Math.atan2(event.pageX - x, event.pageY - y);
+                    let rot = (radian * (180 / Math.PI) * -1) + 270;
+                    eye.style.transform = "rotate("+rot+"deg)";
+                });
+            }
+        </script>
+        
+    </body>
+    
+</html>

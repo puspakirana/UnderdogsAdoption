@@ -1,0 +1,269 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body
+{ 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #131313;
+}
+
+.body2
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1200px;
+    transform-style: preserve-3d;
+}
+
+.container .box
+{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    left: 8px;
+    margin: 40px;
+    background: #232323;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+}
+
+.container .box::before
+{
+    content: 'HELLO';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 4em;
+    font-weight: 900;
+    color: #fff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .box::after
+{
+    content: 'ADOPTER';
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 3em;
+    font-weight: 900;
+    color: #fff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .box:hover::before,
+.container .box:hover::after
+{
+    opacity: 0.04;
+}
+
+.container .box .name
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    transform-style: preserve-3d;
+    transform: translate3d(0,0,75px);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+}
+
+.container .box:hover .name
+{
+    top: 40px;
+    opacity: 1;
+}
+
+.container .box .adopt
+{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,75px);
+    color: #fff;
+    background: #333;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+}
+
+.container .box:hover .adopt
+{
+    bottom: 40px;
+    opacity: 1;
+}
+
+.container .box .circle
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: 0.5s;
+    background: #fff;
+    transform-style: preserve-3d;
+    z-index: 10;
+    opacity: 1;
+    transform: translate3d(-50%, -50%, 50px);
+}
+
+.container .box .dog
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 170px;
+    z-index: 11;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, -50%, 50px);
+}
+
+.container .box:hover .dog
+{
+    transform: translate3d(-50%, -50%, 100px);
+}
+
+.container .box:nth-child(1) .circle,
+.container .box:nth-child(1) .adopt
+{
+    background-color: #D4AF37;
+}
+
+/*card*/
+
+.container .card
+{
+    position: relative;
+    max-width: 400px;
+    height: 480px;
+    background: #fff;
+    flex-direction: column;
+    box-shadow: 0 0px 20px rgba(255,255,255,0.5);
+    transition: 0.3px ease-in-out;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 30px;
+    background-color: #D4AF37;
+}
+
+.container .card:hover
+{
+    height: 650px;
+}
+
+
+.container .card:nth-child(1)
+{
+    background-color: lightpink;
+}
+.container .card:nth-child(2)
+{
+    background-color: #fcf0cf;
+}
+
+.container .card:nth-child(3)
+{
+    background-color: chocolate;
+}
+.container .card:nth-child(4)
+{
+    background-color: #a0ab44;
+}
+
+
+.container .card .content
+{
+    margin: 20px;
+    color: #232323;
+    text-align: center;
+}
+
+/*navigation*/
+
+.meet
+{
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    padding: 20px;
+}
+
+.navbar
+{
+    width: 88%;
+    margin: auto;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo
+{
+    width: 100px;
+    cursor: pointer;
+}
+
+.navbar ul li
+{
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navbar ul li a
+{
+    text-decoration: none;
+    color: #5f5f5f;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.navbar ul li a:hover
+{
+    color: #D4AF37;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

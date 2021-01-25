@@ -1,0 +1,273 @@
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Adopter Registration</title>
+        <link rel="stylesheet" href="adopt.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+    
+    <body>
+        
+        <div class="navbar">
+            <img href="index.html" src="media/logo.png" class="logo">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="underdogs.html">THE UNDERDOGS</a></li>
+                <li><a href="adopt.html">ADOPT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        
+        <div class="body2">
+            <div class="container">
+
+                <header>Adoption Form</header>
+                
+                <div class="progress-bar">
+                    
+                    <div class="step">
+                        <p>Basic</p>
+                        <div class="bullet">
+                            <span>1</span>
+                        </div>
+                        <div class="check fas fa-dog"></div>
+                    </div>
+                    
+                    <div class="step">
+                        <p>Contact</p>
+                        <div class="bullet">
+                            <span>2</span>
+                        </div>
+                        <div class="check fas fa-dog"></div>
+                    </div>
+                    
+                    <div class="step">
+                        <p>Address</p>
+                        <div class="bullet">
+                            <span>3</span>
+                        </div>
+                        <div class="check fas fa-dog"></div>
+                    </div>
+                    
+                    <div class="step">
+                        <p>Additional</p>
+                        <div class="bullet">
+                            <span>4</span>
+                        </div>
+                        <div class="check fas fa-dog"></div>
+                    </div>
+                    
+                    <div class="step">
+                        <p>Dog</p>
+                        <div class="bullet">
+                            <span>5</span>
+                        </div>
+                        <div class="check fas fa-dog"></div>
+                    </div>
+                    
+                </div>
+
+                <div class="form-outer">
+                    <form action="register" method="get">
+
+                        <div class="page slidepage">
+                            <div class="title">Adopter Basic Info:</div>
+                            <div class="field">
+                                <div class="label">First Name</div>
+                                <input type="text" required name="fname">
+                            </div>
+                            <div class="field">
+                                <div class="label">Last Name</div>
+                                <input type="text" required name="lname">
+                            </div>
+                            <div class="field">
+                                <button class="firstNext next">Next</button>
+                            </div>
+                        </div>
+
+                        <div class="page">
+                            <div class="title">Adopter Contact Info:</div>
+                            <div class="field">
+                                <div class="label">E-mail Address</div>
+                                <input type="email" required name="email">
+                            </div>
+                            <div class="field">
+                                <div class="label">Phone Number</div>
+                                <input type="text" required name="phNum">
+                            </div>
+                            <div class="field btns">
+                                <button class="prev-1 prev">Previous</button>
+                                <button class="next-1 next">Next</button>
+                            </div>
+                        </div>
+
+                        <div class="page">
+                            <div class="title">Adopter Address Info:</div>
+                            <div class="field">
+                                <div class="label">Address</div>
+                                <input type="text" required name="address">
+                            </div>
+                            <div class="field">
+                                <div class="label">Country</div>
+                                <input type="text" required name="country">
+                            </div>
+                            <div class="field btns">
+                                <button class="prev-2 prev">Previous</button>
+                                <button class="next-2 next">Next</button>
+                            </div>
+                        </div>
+
+                        <div class="page">
+                            <div class="title">Additional Info:</div>
+                            <div class="field">
+                                <div class="label">ID Number</div>
+                                <input type="text" required name="idNum">
+                            </div>
+                            <div class="field">
+                                <div class="label">Gender</div>
+                                <input type="radio" name="gender" checked value="male">
+                                <label for="male">Male</label>
+                                <input type="radio" name="gender" value="female">
+                                <label for="male">Female</label>
+                            </div>
+                            <div class="field btns">
+                                <button class="prev-3 prev">Previous</button>
+                                <button class="next-3 next">Next</button>
+                            </div>
+                        </div>
+                        
+                        <div class="page">
+                            <div class="title">Choose The Underdogs:</div>
+                            <div class="field">
+                                <div class="label">The Underdogs</div>
+                                <select name="dogs">
+                                    <option>Elmer</option>
+                                    <option>Seven</option>
+                                    <option>Pogo</option>
+                                    <option>Roadie</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <div class="label">Additional Stuff:</div>
+                                <input type="checkbox" name="stuff" value="Basic-Stuff">
+                                <label>Basic Stuff</label>
+                                <input type="checkbox" name="stuff" value="Vaccine">
+                                <label>Vaccine</label>
+                            </div>
+                            <div class="field btns">
+                                <button class="prev-4 prev">Previous</button>
+                                <input type="reset" value="reset">
+                                <input type="submit" class="submit" value="submit">
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+           
+        <script>
+            const slidePage = document.querySelector(".slidepage");
+            const firstNextBtn = document.querySelector(".firstNext");
+            const prevBtnSec = document.querySelector(".prev-1");
+            const nextBtnSec = document.querySelector(".next-1");
+            const prevBtnThird = document.querySelector(".prev-2");
+            const nextBtnThird = document.querySelector(".next-2");
+            const prevBtnFourth = document.querySelector(".prev-3");
+            const nextBtnFourth = document.querySelector(".next-3");
+            const prevBtnFifth = document.querySelector(".prev-4");
+            const submitBtn = document.querySelector(".submit");
+            const progressText = document.querySelectorAll(".step p");
+            const progressCheck = document.querySelectorAll(".step .check");
+            const bullet = document.querySelectorAll(".step .bullet");
+            
+            let current = 1;
+            
+            
+            
+            firstNextBtn.addEventListener("click", function(){
+                event.preventDefault();
+                slidePage.style.marginLeft = "-25%";
+                bullet[current - 1].classList.add("active");
+                progressText[current - 1].classList.add("active");
+                progressCheck[current - 1].classList.add("active");
+                current += 1;
+            });
+            nextBtnSec.addEventListener("click", function(){
+                event.preventDefault();
+                slidePage.style.marginLeft = "-50%";
+                bullet[current - 1].classList.add("active");
+                progressText[current - 1].classList.add("active");
+                progressCheck[current - 1].classList.add("active");
+                current += 1;
+            });
+            nextBtnThird.addEventListener("click", function(){
+                event.preventDefault();
+                slidePage.style.marginLeft = "-75%";
+                bullet[current - 1].classList.add("active");
+                progressText[current - 1].classList.add("active");
+                progressCheck[current - 1].classList.add("active");
+                current += 1;
+            });
+            nextBtnFourth.addEventListener("click", function(){
+                event.preventDefault();
+                slidePage.style.marginLeft = "-100%";
+                bullet[current - 1].classList.add("active");
+                progressText[current - 1].classList.add("active");
+                progressCheck[current - 1].classList.add("active");
+                current += 1;
+            });
+            
+            
+            
+            submitBtn.addEventListener("click", function(){
+                bullet[current - 1].classList.add("active");
+                progressText[current - 1].classList.add("active");
+                progressCheck[current - 1].classList.add("active");
+                current += 1;
+            });
+            
+            
+ 
+            prevBtnSec.addEventListener("click", function(){
+                event.preventDefault();
+                slidePage.style.marginLeft = "0%";
+                bullet[current - 2].classList.remove("active");
+                progressText[current - 2].classList.remove("active");
+                progressCheck[current - 2].classList.remove("active");
+                current -= 1;
+            });
+            prevBtnThird.addEventListener("click", function(){
+                event.preventDefault();
+                slidePage.style.marginLeft = "-25%";
+                bullet[current - 2].classList.remove("active");
+                progressText[current - 2].classList.remove("active");
+                progressCheck[current - 2].classList.remove("active");
+                current -= 1;
+            });
+            prevBtnFourth.addEventListener("click", function(){
+                event.preventDefault();
+                slidePage.style.marginLeft = "-50%";
+                bullet[current - 2].classList.remove("active");
+                progressText[current - 2].classList.remove("active");
+                progressCheck[current - 2].classList.remove("active");
+                current -= 1;
+            });
+            prevBtnFifth.addEventListener("click", function(){
+                event.preventDefault();
+                slidePage.style.marginLeft = "-75%";
+                bullet[current - 2].classList.remove("active");
+                progressText[current - 2].classList.remove("active");
+                progressCheck[current - 2].classList.remove("active");
+                current -= 1;
+            });
+            
+            
+        </script>
+        
+    </body>
+    
+</html>

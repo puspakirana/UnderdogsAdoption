@@ -1,0 +1,72 @@
+<html>
+    
+    <head>
+        <title>Subaru | The Underdogs</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <div class="container">
+            
+            
+            <div class="navbar">
+                <img href="index.html" src="media/logo.png" class="logo">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="underdogs.html">THE UNDERDOGS</a></li>
+                    <li><a href="adopt.html">ADOPT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            
+            <div class="content">
+                <div class="left-col">
+                    <h4>SUBARU PRESENTS</h4>
+                    <h1>THE <br>UNDER<br>DOGS</h1>
+                </div>
+                
+               
+            </div>
+             <div class="right-col">
+                    <p>Every year, we celebrate Subaru Loves Pets month by helping Underdogs find loving homes.<br>At Subaru, we have a long-standing commitment to loving pets. That is why we have partnered<br> with local animal welfare organizations to help over 230,000 pets in need across the country.<br> We have also celebrated Subaru Loves Pets month by establishing a nationwide effort to help <br>shelter dogs find loving homes with special emphasis on the Underdogs with special needs. <br>In addition, we have joined hands with local animal shelters to help with the adoption of <br>thousands of shelter pets around the country.</p>
+                    <br><br><br><br>
+
+            </div>
+            <div class="right2">
+                <img src="media/play.png" id="icon">
+                <p class="listen">&nbsp; Click Here to Listen</p>
+            </div>
+                
+            
+        </div>
+        
+        
+        <audio id="sound">
+            <source src="media/home.mp3" type="audio/mp3">
+        </audio>
+        
+        <script>
+            var sound = document.getElementById("sound");
+            var icon = document.getElementById("icon");
+            
+            icon.onclick = function()
+            {
+                if(sound.paused)
+                    {
+                        sound.play()
+                        icon.src = "media/pause.png";
+                    }
+                else
+                {
+                    sound.pause()
+                    icon.src = "media/play.png";
+                }
+                
+            }
+            
+            
+        </script>
+        
+    </body>
+    
+</html>
