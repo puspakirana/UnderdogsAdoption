@@ -1,6 +1,11 @@
 # UnderdogsAdoption
 A website to help handicapped and old dogs find their true home.
 
+Features:
+- Introduction to the website
+- See the dogs profile
+- Apply for an adoption
+
 This project is created and tested with Netbeans IDE 8.2, using Glashfish Server 4.1.1
 
 HOW TO START THE PROJECT
